@@ -3,6 +3,7 @@ module.exports = ({ env }) => ({
   graphql: {
     enabled: true,
     config: {
+      endpoint: "/graphql",
       playgroundAlways: true,
       defaultLimit: 50,
       maxLimit: 50,
