@@ -964,6 +964,40 @@ export interface ApiPortfolioPortfolio extends Schema.CollectionType {
   };
 }
 
+export interface ApiTeamMemberTeamMember extends Schema.CollectionType {
+  collectionName: 'team_members';
+  info: {
+    singularName: 'team-member';
+    pluralName: 'team-members';
+    displayName: 'Team Member';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    profile_picture: Attribute.Media;
+    paragraph: Attribute.Text;
+    title: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::team-member.team-member',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::team-member.team-member',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -986,6 +1020,7 @@ declare module '@strapi/types' {
       'api::category.category': ApiCategoryCategory;
       'api::client.client': ApiClientClient;
       'api::portfolio.portfolio': ApiPortfolioPortfolio;
+      'api::team-member.team-member': ApiTeamMemberTeamMember;
     }
   }
 }
