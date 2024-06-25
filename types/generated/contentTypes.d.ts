@@ -980,6 +980,7 @@ export interface ApiTeamMemberTeamMember extends Schema.CollectionType {
     profile_picture: Attribute.Media;
     paragraph: Attribute.Text;
     title: Attribute.String;
+    sort_order: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
