@@ -72,6 +72,17 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::category.category"
+    },
+    "mux_video_uploader_mux_asset": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::mux-video-uploader.mux-asset"
+    },
+    "full_video_id_bunny": {
+      "type": "string"
+    },
+    "snippet_video_id_bunny": {
+      "type": "string"
     }
   }
 }
