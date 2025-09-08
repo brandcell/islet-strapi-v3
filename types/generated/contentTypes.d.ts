@@ -386,6 +386,15 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
   };
   attributes: {
     author: Schema.Attribute.String;
+    blog_content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          licenseKey: 'eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3ODg5MTE5OTksImp0aSI6ImQyYWMzYjVjLTlmMDUtNGFmNi1hYjVkLWQ5M2M4MGFmOTRmZCIsImxpY2Vuc2VkSG9zdHMiOlsiMTI3LjAuMC4xIiwibG9jYWxob3N0IiwiMTkyLjE2OC4qLioiLCIxMC4qLiouKiIsIjE3Mi4qLiouKiIsIioudGVzdCIsIioubG9jYWxob3N0IiwiKi5sb2NhbCJdLCJ1c2FnZUVuZHBvaW50IjoiaHR0cHM6Ly9wcm94eS1ldmVudC5ja2VkaXRvci5jb20iLCJkaXN0cmlidXRpb25DaGFubmVsIjpbImNsb3VkIiwiZHJ1cGFsIl0sImxpY2Vuc2VUeXBlIjoiZGV2ZWxvcG1lbnQiLCJmZWF0dXJlcyI6WyJEUlVQIiwiRTJQIiwiRTJXIl0sInZjIjoiODhmMTI1OGEifQ.HFPaC85lLLHXHFq9G5C1yM1frCQ7h_LQQEIaoVCvpgA0LYxI51VD2d5cAJclcZeriQyD5ZeBSlZGFSwq_edXAA';
+          output: 'HTML';
+          preset: 'rich';
+        }
+      >;
     case_studies: Schema.Attribute.Relation<
       'oneToMany',
       'api::case-study.case-study'
