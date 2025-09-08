@@ -18,6 +18,7 @@ module.exports = [
             "data:",
             "blob:",
             "market-assets.strapi.io",
+            process.env.BUNNY_PULL_ZONE,
             "res.cloudinary.com",
           ],
           "media-src": [
@@ -26,6 +27,7 @@ module.exports = [
             "blob:",
             "market-assets.strapi.io",
             "res.cloudinary.com",
+            process.env.BUNNY_PULL_ZONE,
           ],
           upgradeInsecureRequests: null,
         },
