@@ -10,11 +10,10 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@ckeditor/strapi-plugin-ckeditor": "^0.0.11",
+    "@ckeditor/strapi-plugin-ckeditor": "^1.1.1",
     "@strapi/plugin-cloud": "5.23.3",
     "@strapi/plugin-graphql": "5.23.3",
     "@strapi/plugin-users-permissions": "5.23.3",
-    "@strapi/provider-upload-cloudinary": "^4.24.2",
     "@strapi/strapi": "5.23.3",
     "better-sqlite3": "11.3.0",
     "pg": "^8.11.5",
@@ -22,7 +21,6 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
-    "strapi-plugin-mux-video-uploader": "^2.8.4",
     "styled-components": "^6.0.0"
   },
   "author": {
