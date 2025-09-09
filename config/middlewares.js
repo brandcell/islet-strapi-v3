@@ -12,7 +12,7 @@ module.exports = [
             "https:",
             "https://proxy-event.ckeditor.com",
           ],
-          "script-src": ["https://cdn.ckeditor.com"],
+          "script-src": ["'self'", "https:", "https://cdn.ckeditor.com"],
           "img-src": [
             "'self'",
             "data:",
