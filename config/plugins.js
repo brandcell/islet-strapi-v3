@@ -24,6 +24,11 @@ module.exports = ({ env }) => ({
         hostname: env("BUNNY_HOSTNAME"),
         upload_path: env("BUNNY_UPLOAD_PATH"),
       },
+      sizeLimit: 250 * 1024 * 1024,
+      breakpoints: {
+        large: 1440,
+        small: 500,
+      },
     },
   },
   // ...
