@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_layout_grid_1_large_left_2_smalls",
+  "info": {
+    "displayName": "Grid - 1 Large Left 2 Small"
+  },
+  "options": {},
+  "attributes": {
+    "grid_large_left": {
+      "type": "string",
+      "private": true,
+      "default": "grid_large_left",
+      "unique": false
+    },
+    "portfolio": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::portfolio.portfolio"
+    },
+    "portfolio2": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::portfolio.portfolio"
+    },
+    "portfolio3": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::portfolio.portfolio"
+    }
+  },
+  "config": {}
+}
