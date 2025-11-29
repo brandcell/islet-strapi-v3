@@ -503,6 +503,227 @@ export interface ApiClientClient extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiPortfolioCommercialPortfolioCommercial
+  extends Struct.SingleTypeSchema {
+  collectionName: 'portfolio_commercials';
+  info: {
+    displayName: 'Portfolio - Commercial';
+    pluralName: 'portfolio-commercials';
+    singularName: 'portfolio-commercial';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::portfolio-commercial.portfolio-commercial'
+    > &
+      Schema.Attribute.Private;
+    portfolioCommercialLayout: Schema.Attribute.DynamicZone<
+      [
+        'layout.grid-3-x-1',
+        'layout.grid-2-x-2',
+        'layout.grid-1-x-1',
+        'layout.grid-1-large-right-2-small',
+        'layout.grid-1-large-left-2-small',
+      ]
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPortfolioCorporatePortfolioCorporate
+  extends Struct.SingleTypeSchema {
+  collectionName: 'portfolio_corporates';
+  info: {
+    displayName: 'Portfolio - Corporate';
+    pluralName: 'portfolio-corporates';
+    singularName: 'portfolio-corporate';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::portfolio-corporate.portfolio-corporate'
+    > &
+      Schema.Attribute.Private;
+    portfolioCorporateLayout: Schema.Attribute.DynamicZone<
+      [
+        'layout.grid-3-x-1',
+        'layout.grid-2-x-2',
+        'layout.grid-1-x-1',
+        'layout.grid-1-large-right-2-small',
+        'layout.grid-1-large-left-2-small',
+      ]
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPortfolioDocumentaryPortfolioDocumentary
+  extends Struct.SingleTypeSchema {
+  collectionName: 'portfolio_documentaries';
+  info: {
+    displayName: 'Portfolio - Documentary';
+    pluralName: 'portfolio-documentaries';
+    singularName: 'portfolio-documentary';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::portfolio-documentary.portfolio-documentary'
+    > &
+      Schema.Attribute.Private;
+    portfolioDocLayout: Schema.Attribute.DynamicZone<
+      [
+        'layout.grid-3-x-1',
+        'layout.grid-2-x-2',
+        'layout.grid-1-x-1',
+        'layout.grid-1-large-right-2-small',
+        'layout.grid-1-large-left-2-small',
+      ]
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPortfolioHomePortfolioHome extends Struct.SingleTypeSchema {
+  collectionName: 'portfolio_homes';
+  info: {
+    displayName: 'Portfolio Home';
+    pluralName: 'portfolio-homes';
+    singularName: 'portfolio-home';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::portfolio-home.portfolio-home'
+    > &
+      Schema.Attribute.Private;
+    Portfolio_Home: Schema.Attribute.DynamicZone<
+      [
+        'layout.grid-3-x-1',
+        'layout.grid-2-x-2',
+        'layout.grid-1-x-1',
+        'layout.grid-1-large-right-2-small',
+        'layout.grid-1-large-left-2-small',
+      ]
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPortfolioProductPortfolioProduct
+  extends Struct.SingleTypeSchema {
+  collectionName: 'portfolio_products';
+  info: {
+    displayName: 'Portfolio - Product';
+    pluralName: 'portfolio-products';
+    singularName: 'portfolio-product';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::portfolio-product.portfolio-product'
+    > &
+      Schema.Attribute.Private;
+    portfolioProductLayout: Schema.Attribute.DynamicZone<
+      [
+        'layout.grid-3-x-1',
+        'layout.grid-2-x-2',
+        'layout.grid-1-x-1',
+        'layout.grid-1-large-right-2-small',
+        'layout.grid-1-large-left-2-small',
+      ]
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPortfolioSocialMediaPortfolioSocialMedia
+  extends Struct.SingleTypeSchema {
+  collectionName: 'portfolio_social_medias';
+  info: {
+    displayName: 'Portfolio - Social Media';
+    pluralName: 'portfolio-social-medias';
+    singularName: 'portfolio-social-media';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::portfolio-social-media.portfolio-social-media'
+    > &
+      Schema.Attribute.Private;
+    portfolioSocmedLayout: Schema.Attribute.DynamicZone<
+      [
+        'layout.grid-3-x-1',
+        'layout.grid-2-x-2',
+        'layout.grid-1-x-1',
+        'layout.grid-1-large-right-2-small',
+        'layout.grid-1-large-left-2-small',
+      ]
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPortfolioPortfolio extends Struct.CollectionTypeSchema {
   collectionName: 'portfolios';
   info: {
@@ -1095,6 +1316,12 @@ declare module '@strapi/strapi' {
       'api::case-study.case-study': ApiCaseStudyCaseStudy;
       'api::category.category': ApiCategoryCategory;
       'api::client.client': ApiClientClient;
+      'api::portfolio-commercial.portfolio-commercial': ApiPortfolioCommercialPortfolioCommercial;
+      'api::portfolio-corporate.portfolio-corporate': ApiPortfolioCorporatePortfolioCorporate;
+      'api::portfolio-documentary.portfolio-documentary': ApiPortfolioDocumentaryPortfolioDocumentary;
+      'api::portfolio-home.portfolio-home': ApiPortfolioHomePortfolioHome;
+      'api::portfolio-product.portfolio-product': ApiPortfolioProductPortfolioProduct;
+      'api::portfolio-social-media.portfolio-social-media': ApiPortfolioSocialMediaPortfolioSocialMedia;
       'api::portfolio.portfolio': ApiPortfolioPortfolio;
       'api::team-member.team-member': ApiTeamMemberTeamMember;
       'plugin::content-releases.release': PluginContentReleasesRelease;

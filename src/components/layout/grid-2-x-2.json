@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_layout_grid_2_x_2s",
+  "info": {
+    "displayName": "Grid - 2 x 1"
+  },
+  "options": {},
+  "attributes": {
+    "grid_2_1": {
+      "type": "string",
+      "private": true,
+      "default": "grid_2_1"
+    },
+    "aspectRatio": {
+      "type": "enumeration",
+      "enum": [
+        "Aspect 16:9",
+        "Aspect 9:16"
+      ]
+    },
+    "portfolio": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::portfolio.portfolio"
+    },
+    "portfolio2": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::portfolio.portfolio"
+    }
+  },
+  "config": {}
+}

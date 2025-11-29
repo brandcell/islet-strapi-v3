@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_layout_portfolio_grids",
+  "info": {
+    "displayName": "Portfolio Grid",
+    "icon": "grid"
+  },
+  "options": {},
+  "attributes": {
+    "gridType": {
+      "type": "enumeration",
+      "default": "Three Col ",
+      "enum": [
+        "Three Col ",
+        "Two Col ",
+        "Single ",
+        "Large Right ",
+        "Large Left"
+      ]
+    },
+    "gridIcon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "portfolios": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::portfolio.portfolio"
+    }
+  },
+  "config": {}
+}

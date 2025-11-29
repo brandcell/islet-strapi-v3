@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_layout_grid_3_x_1s",
+  "info": {
+    "displayName": "Grid - 3 x 1"
+  },
+  "options": {},
+  "attributes": {
+    "grid_3_1": {
+      "type": "string",
+      "private": true,
+      "default": "grid_3_1",
+      "required": false
+    },
+    "aspectRatio": {
+      "type": "enumeration",
+      "enum": [
+        "Aspect 16:9",
+        "Aspect 9:16"
+      ]
+    },
+    "portfolio": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::portfolio.portfolio"
+    },
+    "portfolio2": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::portfolio.portfolio"
+    },
+    "portfolio3": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::portfolio.portfolio"
+    }
+  },
+  "config": {}
+}

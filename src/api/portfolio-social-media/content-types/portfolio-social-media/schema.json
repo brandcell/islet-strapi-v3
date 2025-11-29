@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "portfolio_social_medias",
+  "info": {
+    "singularName": "portfolio-social-media",
+    "pluralName": "portfolio-social-medias",
+    "displayName": "Portfolio - Social Media"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "portfolioSocmedLayout": {
+      "type": "dynamiczone",
+      "components": [
+        "layout.grid-3-x-1",
+        "layout.grid-2-x-2",
+        "layout.grid-1-x-1",
+        "layout.grid-1-large-right-2-small",
+        "layout.grid-1-large-left-2-small"
+      ]
+    }
+  }
+}
