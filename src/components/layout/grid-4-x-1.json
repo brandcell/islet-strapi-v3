@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_layout_grid_4_x_1s",
+  "info": {
+    "displayName": "Grid - 4 x 1",
+    "icon": "dashboard"
+  },
+  "options": {},
+  "attributes": {
+    "grid_4_1": {
+      "type": "string"
+    },
+    "aspectRatio": {
+      "type": "enumeration",
+      "enum": [
+        "Aspect 16:9",
+        "Aspect 9:16"
+      ]
+    },
+    "portfolio": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::portfolio.portfolio"
+    },
+    "portfolio2": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::portfolio.portfolio"
+    },
+    "portfolio3": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::portfolio.portfolio"
+    },
+    "portfolio4": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::portfolio.portfolio"
+    }
+  },
+  "config": {}
+}

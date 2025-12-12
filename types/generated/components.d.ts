@@ -109,6 +109,34 @@ export interface LayoutGrid3X1 extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutGrid4X1 extends Struct.ComponentSchema {
+  collectionName: 'components_layout_grid_4_x_1s';
+  info: {
+    displayName: 'Grid - 4 x 1';
+    icon: 'dashboard';
+  };
+  attributes: {
+    aspectRatio: Schema.Attribute.Enumeration<['Aspect 16:9', 'Aspect 9:16']>;
+    grid_4_1: Schema.Attribute.String;
+    portfolio: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::portfolio.portfolio'
+    >;
+    portfolio2: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::portfolio.portfolio'
+    >;
+    portfolio3: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::portfolio.portfolio'
+    >;
+    portfolio4: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::portfolio.portfolio'
+    >;
+  };
+}
+
 export interface LayoutPortfolioGrid extends Struct.ComponentSchema {
   collectionName: 'components_layout_portfolio_grids';
   info: {
@@ -136,6 +164,7 @@ declare module '@strapi/strapi' {
       'layout.grid-1-x-1': LayoutGrid1X1;
       'layout.grid-2-x-2': LayoutGrid2X2;
       'layout.grid-3-x-1': LayoutGrid3X1;
+      'layout.grid-4-x-1': LayoutGrid4X1;
       'layout.portfolio-grid': LayoutPortfolioGrid;
     }
   }
