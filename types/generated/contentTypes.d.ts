@@ -531,6 +531,7 @@ export interface ApiPortfolioCommercialPortfolioCommercial
         'layout.grid-1-x-1',
         'layout.grid-1-large-right-2-small',
         'layout.grid-1-large-left-2-small',
+        'layout.grid-4-x-1',
       ]
     >;
     publishedAt: Schema.Attribute.DateTime;
@@ -568,6 +569,7 @@ export interface ApiPortfolioCorporatePortfolioCorporate
         'layout.grid-1-x-1',
         'layout.grid-1-large-right-2-small',
         'layout.grid-1-large-left-2-small',
+        'layout.grid-4-x-1',
       ]
     >;
     publishedAt: Schema.Attribute.DateTime;
@@ -605,6 +607,7 @@ export interface ApiPortfolioDocumentaryPortfolioDocumentary
         'layout.grid-1-x-1',
         'layout.grid-1-large-right-2-small',
         'layout.grid-1-large-left-2-small',
+        'layout.grid-4-x-1',
       ]
     >;
     publishedAt: Schema.Attribute.DateTime;
@@ -641,6 +644,7 @@ export interface ApiPortfolioHomePortfolioHome extends Struct.SingleTypeSchema {
         'layout.grid-1-x-1',
         'layout.grid-1-large-right-2-small',
         'layout.grid-1-large-left-2-small',
+        'layout.grid-4-x-1',
       ]
     >;
     publishedAt: Schema.Attribute.DateTime;
@@ -678,6 +682,7 @@ export interface ApiPortfolioProductPortfolioProduct
         'layout.grid-1-x-1',
         'layout.grid-1-large-right-2-small',
         'layout.grid-1-large-left-2-small',
+        'layout.grid-4-x-1',
       ]
     >;
     publishedAt: Schema.Attribute.DateTime;
@@ -715,6 +720,7 @@ export interface ApiPortfolioSocialMediaPortfolioSocialMedia
         'layout.grid-1-x-1',
         'layout.grid-1-large-right-2-small',
         'layout.grid-1-large-left-2-small',
+        'layout.grid-4-x-1',
       ]
     >;
     publishedAt: Schema.Attribute.DateTime;
