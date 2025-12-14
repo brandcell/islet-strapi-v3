@@ -117,7 +117,7 @@ export interface LayoutGrid4X1 extends Struct.ComponentSchema {
   };
   attributes: {
     aspectRatio: Schema.Attribute.Enumeration<['Aspect 16:9', 'Aspect 9:16']>;
-    grid_4_1: Schema.Attribute.String;
+    grid_4_1: Schema.Attribute.String & Schema.Attribute.DefaultTo<'grid_4_1'>;
     portfolio: Schema.Attribute.Relation<
       'oneToOne',
       'api::portfolio.portfolio'

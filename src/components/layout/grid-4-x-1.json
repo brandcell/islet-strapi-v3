@@ -7,7 +7,8 @@
   "options": {},
   "attributes": {
     "grid_4_1": {
-      "type": "string"
+      "type": "string",
+      "default": "grid_4_1"
     },
     "aspectRatio": {
       "type": "enumeration",
