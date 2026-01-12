@@ -17,7 +17,16 @@ module.exports = ({ strapi }) => ({
       strapi.log.debug(
         `[go-live] Env flags: GO_LIVE_SECRET=${!!GO_LIVE_SECRET}, GO_LIVE_WEBHOOK_URL=${!!GO_LIVE_WEBHOOK_URL}`
       );
-
+      // Extra console logs to force output into Heroku logs for debugging
+      // Do NOT leave sensitive values in logs in production
+      try {
+        console.log('[go-live debug] request ip=', ctx.ip || ctx.request.ip || 'unknown');
+        console.log('[go-live debug] hasCookie=', !!ctx.request.header.cookie);
+        console.log('[go-live debug] secretProvided=', !!providedSecret);
+        console.log('[go-live debug] user=', ctx.state.user ? ctx.state.user.username : 'none');
+      } catch (e) {
+        console.error('[go-live debug] error while logging debug info', e);
+      }
       let webhookUrl = null;
       let webhookName = null;
 
